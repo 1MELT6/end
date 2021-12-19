@@ -1,4 +1,3 @@
-const Koa = require('koa2');
 const Router = require('koa-router')
 
 const userRouter = new Router({ prefix: '/user' })
@@ -13,9 +12,7 @@ userRouter.get('/:id', (ctx, next) => {
 })
 
 
-const app = new Koa();
 
-app.use(userRouter.routes())
 
 // app.use((ctx, next) => {
 //     console.log(ctx.request.url);
@@ -29,3 +26,5 @@ app.use(userRouter.routes())
 //     ctx.response.body = 'ssss'
 // })
 
+
+module.exports = userRouter
